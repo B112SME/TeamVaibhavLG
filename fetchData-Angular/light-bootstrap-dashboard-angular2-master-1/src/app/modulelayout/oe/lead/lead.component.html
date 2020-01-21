@@ -1,0 +1,32 @@
+<div>
+
+    <h1 style="text-align: center;"><u>LeadDetails</u></h1>
+    <table border="1" align="center">
+        <thead></thead>
+        <tr>
+            <th>leadId</th>
+            <th>enquiryId</th>
+            <th>customerAdharcard</th>
+            <th>customerPancard</th>
+            <th>customerAdharno</th>
+            <th>customerPanno</th>
+            <th>date</th>
+            <th>statusCode</th>
+            <th>leadDateAndTime</th>
+        </tr>
+
+        <tbody>
+            <tr *ngFor="let lead of leaddata">
+                <td>{{lead.leadId}}</td>
+                <td>{{lead.enquiryId}}</td>
+                <td>{{lead.customerAdharcard}}</td>
+                <td>{{lead.customerPancard}}</td>
+                <td>{{lead.customerAdharno}}</td>
+                <td>{{lead.customerPanno}}</td>
+                <td>{{lead.date}}</td>
+                <td>{{lead.statusCode}}</td>
+                <td>{{lead.leadDateAndTime}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
