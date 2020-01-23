@@ -2,6 +2,7 @@ package com.crts.app.sme.main.serviceI;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,6 +51,19 @@ Lead mylead=mp.map(leadto, Lead.class);
 			lidto.add(ld);
 		}
 		return lidto;
+	}
+
+	@Override
+	public Optional<Lead> getLead(int leadId) {
+		
+		return hr.findById(leadId);
+		 
+	}
+
+	@Override
+	public void deleteLead(int leadId) {
+		hr.deleteById(leadId);
+		
 	}
 
 }

@@ -8,4 +8,6 @@ import com.crts.app.sme.main.model.Lead;
 @Repository
 public interface HomeRepository extends CrudRepository<Lead, Integer> {
 
+	
+
 }

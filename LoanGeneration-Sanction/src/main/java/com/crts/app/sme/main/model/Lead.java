@@ -16,15 +16,10 @@ public class Lead {
 
      @OneToOne(cascade=CascadeType.ALL)
 	private Enquiry enquiryId;
-
 	private String customerAdharcard;
-
 	private String customerPancard;
-
 	private long customerAdharno;
-
 	private String customerPanno;
-
 	private String date;
 	private int statusCode;
 
