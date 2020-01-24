@@ -9,13 +9,14 @@ import javax.persistence.Id;
 public class Cibil {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY.AUTO )
+	//@GeneratedValue(strategy = GenerationType.SEQUENCE )
 	private int cibilId;
 	private int leadId;
 	private double cibilScore;
 	private String cibilScoreDateTime;
 	private int status;
 	private String remark;
+	
 	public int getCibilId() {
 		return cibilId;
 	}
@@ -51,6 +52,11 @@ public class Cibil {
 	}
 	public void setRemark(String remark) {
 		this.remark = remark;
+	}
+	@Override
+	public String toString() {
+		return "Cibil [cibilId=" + cibilId + ", leadId=" + leadId + ", cibilScore=" + cibilScore
+				+ ", cibilScoreDateTime=" + cibilScoreDateTime + ", status=" + status + ", remark=" + remark + "]";
 	}
 
 	
