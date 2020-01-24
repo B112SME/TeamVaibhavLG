@@ -2,6 +2,7 @@ package com.crts.app.sme.main.serviceImpl;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.apache.catalina.mapper.Mapper;
 import org.modelmapper.ModelMapper;
@@ -89,6 +90,14 @@ public class HomeServiceImpl implements HomeService
 	public List<LoanDetails> getAlldata(LoanDetails loandetails) {
 
 		return (List<LoanDetails>) lg.findAll();
+	}
+
+	@Override
+	public Optional<LoanDetails> getloandata(int loanid) 
+	{
+
+		return lg.findById(loanid);
+		
 	}
 	
 	

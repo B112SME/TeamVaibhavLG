@@ -1,6 +1,7 @@
 package com.crts.app.sme.main.serviceI;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.crts.app.sme.main.dto.Dto;
 import com.crts.app.sme.main.model.LoanDetails;
@@ -26,5 +27,6 @@ public interface HomeService
 
 	List<LoanDetails> getAlldata(LoanDetails loandetails);
 
+	Optional<LoanDetails> getloandata(int loanid);
 
 }
